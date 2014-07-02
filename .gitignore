@@ -26,7 +26,6 @@ proguard/
 .idea/
 
 *.pydevproject
-.project
 .metadata
 bin/**
 tmp/**
