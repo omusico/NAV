@@ -1,4 +1,6 @@
-package com.example.nav;
+package nav.activities;
+
+import com.example.nav.R;
 
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
