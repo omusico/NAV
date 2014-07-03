@@ -1,5 +1,0 @@
-Yeah, it works
-
-Finally figured out how to import Android projects from github into eclipse.
-It's ugly and doesn't allow you do it the way that makes sense, but at least
-it works.
