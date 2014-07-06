@@ -20,6 +20,8 @@ import android.widget.TextView;
 
 import com.example.nav.R;
 
+import fragments.Login;
+
 public class MainActivity extends ActionBarActivity {
 
 	private CharSequence mDrawerTitle;
@@ -73,6 +75,12 @@ public class MainActivity extends ActionBarActivity {
 					
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
+		
+		if (savedInstanceState == null) {
+			FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+			ft.replace(R.id.content_frame, new Login(), "log");
+			ft.commit();
+		}
 	}
 	@Override public boolean onOptionsItemSelected(MenuItem item) {
 		switch(item.getItemId()){
@@ -96,15 +104,12 @@ public class MainActivity extends ActionBarActivity {
 		case 0:
 //			ft.replace(R.id.content_frame, new MiggetterViewPager(), "Home");
 //			ft.commit();
-//			invalidateOptionsMenu();
 			break;
 		case 1:
-//			ft.replace(R.id.content_frame, new About(), "About");
-//			ft.commit();
+			ft.replace(R.id.content_frame, new Login(), "log");
+			ft.commit();
 			break;
 		case 2:
-//			ft.replace(R.id.content_frame, new Log(), "Log");
-//			ft.commit();
 			break;
 		}
 		mDrawerList.setItemChecked(position, true);
