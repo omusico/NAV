@@ -6,6 +6,9 @@
     <string name="nav_title">NAV</string>
     <string name="splash_description">Delivering New Age Valet Services</string>
 
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Close</string>
+    
     <string name="login_signup">Create Account</string>
     <string name="login_username">Username</string>
     <string name="login_password">Password</string>
