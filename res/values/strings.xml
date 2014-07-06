@@ -3,4 +3,14 @@
 
     <string name="app_name"><b>NAV</b></string>
 
+    <string name="nav_title">NAV</string>
+
+    <string name="splash_description">Delivering New Age Valet Services</string>
+
+    <string name="login_signup">Create Account</string>
+
+    <string name="login_username">Username</string>
+
+    <string name="login_password">Password</string>
+
 </resources>

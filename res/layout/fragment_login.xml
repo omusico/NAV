@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bridge">
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/edtLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/edittext_rounded_corners"
+        android:ems="10"
+        android:hint="@string/login_password"
+        android:ellipsize="start"
+        android:gravity="center"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/edtLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtPassword"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="171dp"
+        android:background="@drawable/edittext_rounded_corners"
+        android:ems="10"
+        android:hint="@string/login_username"
+        android:ellipsize="start"
+        android:gravity="center"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtPassword"
+        android:layout_alignRight="@+id/edtPassword"
+        android:layout_below="@+id/edtPassword"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="@drawable/create_account"
+        android:text="@string/login_signup" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/edtPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:text="@string/nav_title"
+        android:textColor="@color/white"
+        android:textSize="52sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

@@ -20,7 +20,7 @@ public class SplashScreen extends ActionBarActivity {
 	    setContentView(R.layout.activity_splashscreen);
 	    getSupportActionBar().hide();
 	    
-	    long SPLASH_TIME = 1500; //1.5 seconds
+	    long SPLASH_TIME = 3000; //3 seconds
 	    
 	    mJumpRunnable = new Runnable() {
 	    public void run() { jump();  }
