@@ -2,15 +2,20 @@
 <resources>
 
     <string name="app_name"><b>NAV</b></string>
-
+    
     <string name="nav_title">NAV</string>
-
     <string name="splash_description">Delivering New Age Valet Services</string>
 
     <string name="login_signup">Create Account</string>
-
     <string name="login_username">Username</string>
-
     <string name="login_password">Password</string>
+    
+    <string name="register_check_account"><i>Check Account</i></string>
+    <string name="register_firstname"><i>First Name</i></string>
+    <string name="register_lastname"><i>Last Name</i></string>
+    <string name="register_phone"><i>Phone Number</i></string>
+    <string name="register_password"><i>Password</i></string>
+    <string name="register_againpassword"><i>Re-Enter Password</i></string>
+    <string name="register_createaccount">Create Account</string>
 
 </resources>

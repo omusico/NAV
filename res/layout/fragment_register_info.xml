@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="30dp">
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/ValetTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/theme_bar" 
+        android:textSize="22dp"
+        android:text="Info"
+        android:textStyle="bold"/>
+    
+    <View 
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/theme_bar"
+        />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    
+    <EditText
+        android:id="@+id/edtFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/register_firstname"
+        android:singleLine="true">
+
+        <requestFocus />
+    </EditText>
+    
+    <EditText
+        android:id="@+id/edtLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/register_lastname"
+        android:singleLine="true" >
+
+    </EditText>
+    
+    <EditText
+        android:id="@+id/edtPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/register_phone"
+        android:singleLine="true" >
+
+    </EditText>
+    
+    <TextView
+        android:id="@+id/passwords"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/theme_bar" 
+        android:textSize="22dp"
+        android:text="Key"
+        android:textStyle="bold"/>
+    
+    <View 
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/theme_bar"
+        />
+    
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/register_password"
+        android:singleLine="true" >
+
+    </EditText>
+    
+    <EditText
+        android:id="@+id/passwordAgainEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/register_againpassword"
+        android:singleLine="true" >
+
+    </EditText>
+    
+    <View 
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="#FF8000"
+        android:layout_marginTop="10dp"
+        />
+    
+    <Button
+        android:id="@+id/btnCreateAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/theme_button"
+        android:text="@string/register_createaccount"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvValidation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp"
+        android:textColor="#ff0000" />
+	</LinearLayout>
+	</LinearLayout>
+</ScrollView>
+
