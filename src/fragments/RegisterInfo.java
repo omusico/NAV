@@ -74,9 +74,9 @@ public class RegisterInfo extends Fragment {
 						    ft.replace(R.id.content_frame, new Welcome(), "welcome");
 						    ft.commit();
 						} else {
-						    tvValidation.setText(e.toString());
+							pDialog.dismiss();
+							tvValidation.setText("Username already exists!");
 						}
-						
 					}});
 			} else if (!password.equals(passwordAgain)){
 				tvValidation.setText("Passwords must match!");
@@ -95,6 +95,7 @@ public class RegisterInfo extends Fragment {
 		edtPassword = (EditText) view.findViewById(R.id.edtPassword);
 		edtPasswordAgain = (EditText) view.findViewById(R.id.edtPasswordAgain);
 		btnCreateAccount = (Button) view.findViewById(R.id.btnCreateAccount);
+		tvValidation = (TextView) view.findViewById(R.id.tvValidation);
 	}
 	
 	private boolean checkEmpty(String chk) {

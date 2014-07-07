@@ -21,12 +21,10 @@ public class Login extends Fragment {
 	private EditText edtUserName, edtPassword;
 	private Button btnSignUp, btnLogin;
 	private FragmentTransaction ft;
-	private ParseUser user;
 	private ProgressDialog pDialog;
 	
 	@Override public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		user = new ParseUser();
 		ft = getFragmentManager().beginTransaction();
 	}
 	
