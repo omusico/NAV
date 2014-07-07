@@ -19,6 +19,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.nav.R;
+import com.parse.Parse;
 
 import fragments.Login;
 
@@ -40,6 +41,10 @@ public class MainActivity extends ActionBarActivity {
 	// ****** START NAVIGATION DRAWER CODE ******
 	@Override protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		//Parse application id and client key
+		Parse.initialize(this, "DcaJgMRlLqEKR1IKJTDVuM2Si0OWLfghoQlYNyHa", "tvVa66moSgJe3HD1sfrLpccshas71JoOXsZX1Ro9");
+		
 		setContentView(R.layout.activity_main);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);

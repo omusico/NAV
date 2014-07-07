@@ -1,0 +1,64 @@
+package fragments;
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+
+import com.example.nav.R;
+import com.parse.ParseUser;
+
+public class Welcome extends Fragment {
+	
+	private TextView tvEmail, tvFirstName, tvLastName, tvPhone;
+	private Button btnLog;
+	private ParseUser currentUser;
+	private FragmentTransaction ft;
+	
+	@Override public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		currentUser = ParseUser.getCurrentUser();
+		ft = getFragmentManager().beginTransaction();
+	}
+	
+	@Override public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		View view = inflater.inflate(R.layout.fragment_welcome, container, false);
+		setupViews(view);
+		setupValues();
+		setupListeners();
+		return view;
+	}
+
+	private void setupListeners() {
+		btnLog.setOnClickListener(new OnClickListener() { @Override public void onClick(View v) {
+		  currentUser.logOut();
+		  ft.replace(R.id.content_frame, new Login(), "login");
+		  ft.commit();
+		}});
+	}
+
+	private void setupValues() {
+		if (currentUser != null) {
+		  tvEmail.setText(currentUser.getEmail());
+		  tvFirstName.setText(currentUser.get("phone").toString());
+		  tvLastName.setText(currentUser.get("firstname").toString());
+		  tvPhone.setText(currentUser.get("lastname").toString());
+		} else {
+		  ft.replace(R.id.content_frame, new Login(), "login");
+		  ft.commit();
+		}
+	}
+
+	private void setupViews(View view) {
+		tvEmail = (TextView) view.findViewById(R.id.tvEmail);
+		tvFirstName = (TextView) view.findViewById(R.id.tvFirstName);
+		tvLastName = (TextView) view.findViewById(R.id.tvLastName);
+		tvPhone = (TextView) view.findViewById(R.id.tvPhone);
+		btnLog = (Button) view.findViewById(R.id.btnLog);
+	}
+}

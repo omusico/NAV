@@ -36,12 +36,13 @@
         android:layout_margin="10dp"
         android:gravity="center"
         android:ellipsize="start"
-        android:singleLine="true">
+        android:singleLine="true"
+        android:background="@drawable/edittext_rounded_corners">
         <requestFocus />
     </EditText>
     
     <Button
-        android:id="@+id/checkButton"
+        android:id="@+id/btnCheck"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
