@@ -22,7 +22,7 @@
     <string name="register_password"><i>Password</i></string>
     <string name="register_againpassword"><i>Re-Enter Password</i></string>
     <string name="register_createaccount">Create Account</string>
-    <string name="register_email">Email</string>
-    <string name="register_username">Username</string>
+    <string name="register_email"><i>Email</i></string>
+    <string name="register_username"><i>Username</i></string>
 
 </resources>

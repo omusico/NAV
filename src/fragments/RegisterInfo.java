@@ -1,7 +1,6 @@
 package fragments;
 
 import android.app.ProgressDialog;
-import android.net.ParseException;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -24,15 +23,14 @@ public class RegisterInfo extends Fragment {
 	private TextView tvValidation;
 	private ProgressDialog pDialog;
 	private ParseUser user;
-	private FragmentTransaction ft;
 	
 	@Override public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		user = new ParseUser();
-		ft = getFragmentManager().beginTransaction();
 	}
 	
 	@Override public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		getActivity().getActionBar().hide();
 		View view = inflater.inflate(R.layout.fragment_register_info, container, false);
 		setupViews(view);
 		setupListeners();
@@ -71,6 +69,7 @@ public class RegisterInfo extends Fragment {
 					@Override public void done(com.parse.ParseException e) {
 						if (e == null) {
 							pDialog.dismiss();
+							FragmentTransaction ft = getFragmentManager().beginTransaction();
 						    ft.replace(R.id.content_frame, new Welcome(), "welcome");
 						    ft.commit();
 						} else {

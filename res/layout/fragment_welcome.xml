@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:flatui="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="30dp"
@@ -14,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Welcome"
-        android:textColor="@color/theme_bar"
+        android:textColor="@color/hotpink_dark"
         android:textSize="22dp"
         android:textStyle="bold|italic" />
     <LinearLayout 
@@ -28,20 +29,20 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Email"
-        android:textColor="@color/theme_bar"
+        android:textColor="@color/hotpink_dark"
         android:textSize="14dp"
         android:textStyle="bold|italic" />
 
    		<View
         android:layout_width="fill_parent"
         android:layout_height="0.5dp"
-        android:background="@color/theme_bar" />
+        android:background="@color/hotpink_dark" />
         
         <TextView
         android:id="@+id/tvEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:text="Email of User"
         android:textSize="12dp"
         android:textColor="@color/black"/>
@@ -52,20 +53,20 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="First Name"
-        android:textColor="@color/theme_bar"
+        android:textColor="@color/hotpink_dark"
         android:textSize="14dp"
         android:textStyle="bold|italic" />
 
    		<View
         android:layout_width="fill_parent"
         android:layout_height="0.5dp"
-        android:background="@color/theme_bar" />
+        android:background="@color/hotpink_dark" />
         
    		<TextView
         android:id="@+id/tvFirstName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:text="First Name"
         android:textSize="12dp"
         android:textColor="@color/black"/>
@@ -76,20 +77,20 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Last Name"
-        android:textColor="@color/theme_bar"
+        android:textColor="@color/hotpink_dark"
         android:textSize="14dp"
         android:textStyle="bold|italic" />
 
    		<View
         android:layout_width="fill_parent"
         android:layout_height="0.5dp"
-        android:background="@color/theme_bar" />
+        android:background="@color/hotpink_dark" />
         
    		<TextView
         android:id="@+id/tvLastName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:text="Last Name"
         android:textSize="12dp"
         android:textColor="@color/black"/>
@@ -100,20 +101,20 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Phone Number"
-        android:textColor="@color/theme_bar"
+        android:textColor="@color/hotpink_dark"
         android:textSize="14dp"
         android:textStyle="bold|italic" />
 
    		<View
         android:layout_width="fill_parent"
         android:layout_height="0.5dp"
-        android:background="@color/theme_bar" />
+        android:background="@color/hotpink_dark" />
         
    		<TextView
         android:id="@+id/tvPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:text="Phone #"
         android:textSize="12dp"
         android:textColor="@color/black"/>
@@ -121,17 +122,21 @@
     </LinearLayout>
     
 
-	<Button
+	<com.cengalabs.flatui.views.FlatButton
         android:id="@+id/btnLog"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textColor="#FFFFFF"
-        android:background="@drawable/theme_button"
         android:text="Log Out"
         android:textStyle="bold"
-        android:paddingLeft="20dp" 
-        android:paddingRight="20dp"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="30dp"
+        flatui:theme="@array/hotpink"
+    	flatui:textAppearance="light"
+    	flatui:fontFamily="roboto"
+    	flatui:fontWeight="light"
+    	flatui:fontExtension="ttf"
+    	flatui:borderWidth="2dp"
+    	flatui:cornerRadius="5dp"
+    	flatui:blockButtonEffectHeight="3dp"/>
     
 
 </LinearLayout>

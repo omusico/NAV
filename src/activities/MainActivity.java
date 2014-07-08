@@ -6,7 +6,7 @@ import android.content.DialogInterface;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
-import android.support.v4.app.FragmentManager;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
@@ -18,10 +18,11 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.cengalabs.flatui.FlatUI;
 import com.example.nav.R;
-import com.parse.Parse;
 
 import fragments.Login;
+import fragments.NavViewPager;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -37,15 +38,27 @@ public class MainActivity extends ActionBarActivity {
 	
 	private TextView mCustomTitle;
 	
-	private FragmentTransaction ft;
-	
 	// ******************************************
 	// ****** START NAVIGATION DRAWER CODE ******
 	@Override protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		ft = getSupportFragmentManager().beginTransaction();
 		
 		setContentView(R.layout.activity_main);
+		
+		// Converts the default values (radius, size, border) to dp to be compatible with different
+		// screen sizes. If you skip this there may be problem with different screen densities
+		FlatUI.initDefaultValues(this);
+
+		// Setting default theme to avoid to add the attribute "theme" to XML 
+		// and to be able to change the whole theme at once
+		FlatUI.setDefaultTheme(R.array.hotpink);    // for using custom theme as default
+
+		// Getting action bar drawable and setting it.
+		// Sometimes weird problems may occur while changing action bar drawable at runtime.
+		// You can try to set title of the action bar to invalidate it after setting background.
+		getActionBar().setBackgroundDrawable(FlatUI.getActionBarDrawable(this, R.array.hotpink, false));
+		getSupportActionBar().setBackgroundDrawable(FlatUI.getActionBarDrawable(this, R.array.hotpink, false));
+		
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayOptions(
@@ -59,8 +72,8 @@ public class MainActivity extends ActionBarActivity {
 		
         mDrawerTitle = getTitle();
         
-        title = new String[] { "Home, About", "Log"};
-		icon = new int[] { R.drawable.ic_action_about, R.drawable.ic_action_login};
+        title = new String[] { "Home", "About", "Log"};
+		icon = new int[] { R.drawable.ic_action_home, R.drawable.ic_action_about, R.drawable.ic_action_login};
 		
 		mMenuAdapter = new DrawerListAdapter(MainActivity.this, title, icon);
 		mDrawerList.setAdapter(mMenuAdapter);
@@ -82,6 +95,7 @@ public class MainActivity extends ActionBarActivity {
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
 		
 		if (savedInstanceState == null) {
+			FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 			ft.replace(R.id.content_frame, new Login(), "log");
 			ft.commit();
 		}
@@ -101,6 +115,7 @@ public class MainActivity extends ActionBarActivity {
 		return super.onOptionsItemSelected(item);
 	}
 	private void selectItem(int position) {
+		FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 		switch (position) {
 		case 0:
 			ft.replace(R.id.content_frame, new NavViewPager(), "viewpager");
@@ -110,9 +125,14 @@ public class MainActivity extends ActionBarActivity {
 			//About Fragment Transaction here!
 			break;
 		case 2:
-			ft.replace(R.id.content_frame, new Login(), "log");
-			ft.commit();
-			break;
+			//Working but we do not need to load the login page anymore after a user logins (Hidden Navigation Menu Implemented)!
+			Fragment checkFrag = getSupportFragmentManager().findFragmentByTag("log");
+			if(checkFrag == null){
+				ft.replace(R.id.content_frame, new Login(), "log");
+				ft.commit();
+				break;
+			} 
+			else break;
 		}
 		mDrawerList.setItemChecked(position, true);
 		mDrawerLayout.closeDrawer(mDrawerList);

@@ -18,15 +18,14 @@ public class Welcome extends Fragment {
 	private TextView tvEmail, tvFirstName, tvLastName, tvPhone;
 	private Button btnLog;
 	private ParseUser currentUser;
-	private FragmentTransaction ft;
 	
 	@Override public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		currentUser = ParseUser.getCurrentUser();
-		ft = getFragmentManager().beginTransaction();
 	}
 	
 	@Override public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		getActivity().getActionBar().show();
 		View view = inflater.inflate(R.layout.fragment_welcome, container, false);
 		setupViews(view);
 		setupValues();
@@ -37,6 +36,7 @@ public class Welcome extends Fragment {
 	private void setupListeners() {
 		btnLog.setOnClickListener(new OnClickListener() { @Override public void onClick(View v) {
 		  currentUser.logOut();
+		  FragmentTransaction ft = getFragmentManager().beginTransaction();
 		  ft.replace(R.id.content_frame, new Login(), "login");
 		  ft.commit();
 		}});
@@ -49,6 +49,7 @@ public class Welcome extends Fragment {
 		  tvLastName.setText(currentUser.get("firstname").toString());
 		  tvPhone.setText(currentUser.get("lastname").toString());
 		} else {
+		  FragmentTransaction ft = getFragmentManager().beginTransaction();
 		  ft.replace(R.id.content_frame, new Login(), "login");
 		  ft.commit();
 		}

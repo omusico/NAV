@@ -20,22 +20,22 @@ public class Login extends Fragment {
 	
 	private EditText edtUserName, edtPassword;
 	private Button btnSignUp, btnLogin;
-	private FragmentTransaction ft;
 	private ProgressDialog pDialog;
 	private ParseUser currentUser;
 	
 	@Override public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		currentUser = ParseUser.getCurrentUser();
-		ft = getFragmentManager().beginTransaction();
 	}
 	
 	@Override public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fragment_login, container, false);
 		if(currentUser == null){
+			getActivity().getActionBar().hide();
 			setupViews(view);
 			setupListeners();
 		} else {
+			FragmentTransaction ft = getFragmentManager().beginTransaction();
 			ft.replace(R.id.content_frame, new Welcome(), "welcome");
 			ft.commit();
 		}
@@ -44,6 +44,7 @@ public class Login extends Fragment {
 
 	private void setupListeners() {
 		btnSignUp.setOnClickListener(new OnClickListener() { @Override public void onClick(View v) {
+			FragmentTransaction ft = getFragmentManager().beginTransaction();
 			ft.replace(R.id.content_frame, new RegisterInfo(), "register");
 			ft.addToBackStack("bRegister");
 			ft.commit();
@@ -57,6 +58,7 @@ public class Login extends Fragment {
 			ParseUser.logInInBackground(edtUserName.getText().toString().trim(), edtPassword.getText().toString().trim(), new LogInCallback() {
 			@Override public void done(ParseUser user, com.parse.ParseException e) {
 				pDialog.dismiss();
+				FragmentTransaction ft = getFragmentManager().beginTransaction();
 				ft.replace(R.id.content_frame, new Welcome(), "welcome");
 				ft.commit();
 			}});	
