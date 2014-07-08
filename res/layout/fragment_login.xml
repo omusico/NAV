@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -41,7 +42,7 @@
         <requestFocus />
     </EditText>
 
-    <Button
+    <helpers.FButton
         android:id="@+id/btnSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -49,12 +50,16 @@
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/btnLogin"
         android:layout_marginBottom="17dp"
-        android:background="@drawable/theme_white_button"
         android:text="@string/login_signup"
         android:textColor="@color/theme_bar"
-        android:textStyle="bold" />
+        android:textStyle="bold" 
+        fbutton:buttonColor="@color/white"
+        fbutton:shadowColor="@color/color_pomegranate"
+        fbutton:cornerRadius="5dp"
+        fbutton:shadowEnabled="true"
+        fbutton:shadowHeight="2.5dp"/>
 
-    <Button
+    <helpers.FButton
         android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
@@ -65,7 +70,12 @@
         android:background="@drawable/theme_button"
         android:text="@string/login_log"
         android:textColor="@color/white"
-        android:textStyle="bold" />
+        android:textStyle="bold" 
+        fbutton:buttonColor="@color/color_alizarin"
+        fbutton:shadowColor="@color/color_pomegranate"
+        fbutton:cornerRadius="5dp"
+        fbutton:shadowEnabled="true"
+        fbutton:shadowHeight="2.5dp"/>
 
     <EditText
         android:id="@+id/edtPassword"

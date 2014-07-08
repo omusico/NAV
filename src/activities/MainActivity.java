@@ -37,10 +37,13 @@ public class MainActivity extends ActionBarActivity {
 	
 	private TextView mCustomTitle;
 	
+	private FragmentTransaction ft;
+	
 	// ******************************************
 	// ****** START NAVIGATION DRAWER CODE ******
 	@Override protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		ft = getSupportFragmentManager().beginTransaction();
 		
 		setContentView(R.layout.activity_main);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -56,7 +59,7 @@ public class MainActivity extends ActionBarActivity {
 		
         mDrawerTitle = getTitle();
         
-        title = new String[] { "About", "Log"};
+        title = new String[] { "Home, About", "Log"};
 		icon = new int[] { R.drawable.ic_action_about, R.drawable.ic_action_login};
 		
 		mMenuAdapter = new DrawerListAdapter(MainActivity.this, title, icon);
@@ -79,7 +82,6 @@ public class MainActivity extends ActionBarActivity {
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
 		
 		if (savedInstanceState == null) {
-			FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 			ft.replace(R.id.content_frame, new Login(), "log");
 			ft.commit();
 		}
@@ -99,19 +101,17 @@ public class MainActivity extends ActionBarActivity {
 		return super.onOptionsItemSelected(item);
 	}
 	private void selectItem(int position) {
-    	FragmentManager fm = getSupportFragmentManager();
-		FragmentTransaction ft = fm.beginTransaction();
-		
 		switch (position) {
 		case 0:
-//			ft.replace(R.id.content_frame, new MiggetterViewPager(), "Home");
-//			ft.commit();
-			break;
-		case 1:
-			ft.replace(R.id.content_frame, new Login(), "log");
+			ft.replace(R.id.content_frame, new NavViewPager(), "viewpager");
 			ft.commit();
 			break;
+		case 1:
+			//About Fragment Transaction here!
+			break;
 		case 2:
+			ft.replace(R.id.content_frame, new Login(), "log");
+			ft.commit();
 			break;
 		}
 		mDrawerList.setItemChecked(position, true);
