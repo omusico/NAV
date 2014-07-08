@@ -22,22 +22,30 @@ public class Login extends Fragment {
 	private Button btnSignUp, btnLogin;
 	private FragmentTransaction ft;
 	private ProgressDialog pDialog;
+	private ParseUser currentUser;
 	
 	@Override public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		currentUser = ParseUser.getCurrentUser();
 		ft = getFragmentManager().beginTransaction();
 	}
 	
 	@Override public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fragment_login, container, false);
-		setupViews(view);
-		setupListeners();
+		if(currentUser == null){
+			setupViews(view);
+			setupListeners();
+		} else {
+			ft.replace(R.id.content_frame, new Welcome(), "welcome");
+			ft.commit();
+		}
 		return view;
 	}
 
 	private void setupListeners() {
 		btnSignUp.setOnClickListener(new OnClickListener() { @Override public void onClick(View v) {
-			ft.replace(R.id.content_frame, new RegisterInfo(), "check");
+			ft.replace(R.id.content_frame, new RegisterInfo(), "register");
+			ft.addToBackStack("bRegister");
 			ft.commit();
 		}});
 		btnLogin.setOnClickListener(new OnClickListener() { @Override public void onClick(View v) {

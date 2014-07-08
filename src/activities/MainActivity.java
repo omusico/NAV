@@ -42,9 +42,6 @@ public class MainActivity extends ActionBarActivity {
 	@Override protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		//Parse application id and client key
-		Parse.initialize(this, "DcaJgMRlLqEKR1IKJTDVuM2Si0OWLfghoQlYNyHa", "tvVa66moSgJe3HD1sfrLpccshas71JoOXsZX1Ro9");
-		
 		setContentView(R.layout.activity_main);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
@@ -147,7 +144,8 @@ public class MainActivity extends ActionBarActivity {
 	// ****** START EXIT CODE ******
 	// *****************************
 	@Override public void onBackPressed() {
-		exitApp();
+		if(getSupportFragmentManager().getBackStackEntryCount() == 0) exitApp();
+		else super.onBackPressed();
 	}
 	public void exitApp(){
 		new AlertDialog.Builder(this)
