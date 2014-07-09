@@ -175,21 +175,21 @@
         android:layout_marginTop="10dp"
         />
     
-    <com.cengalabs.flatui.views.FlatButton
+    <com.dd.processbutton.iml.ActionProcessButton
         android:id="@+id/btnCreateAccount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="@string/register_createaccount"
         android:textStyle="bold"
-        flatui:theme="@array/hotpink"
-    	flatui:textAppearance="light"
-    	flatui:fontFamily="roboto"
-    	flatui:fontWeight="light"
-    	flatui:fontExtension="ttf"
-    	flatui:borderWidth="2dp"
-    	flatui:cornerRadius="5dp"
-    	flatui:blockButtonEffectHeight="3dp"
+        android:textColor="@color/white"
+	    flatui:pb_colorComplete="@color/green_complete"
+	    flatui:pb_colorNormal="@color/theme_bar"
+	    flatui:pb_colorProgress="@color/purple_progress"
+	    flatui:pb_textComplete="Success"
+	    flatui:pb_textProgress="Creating..."
+	    flatui:pb_textError="Error"
+	    flatui:pb_colorError="@color/red_error"
         />
 
     <TextView

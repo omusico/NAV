@@ -7,16 +7,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
+import com.dd.processbutton.iml.ActionProcessButton;
 import com.example.nav.R;
 import com.parse.ParseUser;
 
 public class Welcome extends Fragment {
 	
 	private TextView tvEmail, tvFirstName, tvLastName, tvPhone;
-	private Button btnLog;
+	private ActionProcessButton btnLog;
 	private ParseUser currentUser;
 	
 	@Override public void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,10 @@ public class Welcome extends Fragment {
 	}
 
 	private void setupListeners() {
+		
 		btnLog.setOnClickListener(new OnClickListener() { @Override public void onClick(View v) {
+		  btnLog.setMode(ActionProcessButton.Mode.ENDLESS);
+		  btnLog.setProgress(1);
 		  currentUser.logOut();
 		  FragmentTransaction ft = getFragmentManager().beginTransaction();
 		  ft.replace(R.id.content_frame, new Login(), "login");
@@ -60,6 +63,6 @@ public class Welcome extends Fragment {
 		tvFirstName = (TextView) view.findViewById(R.id.tvFirstName);
 		tvLastName = (TextView) view.findViewById(R.id.tvLastName);
 		tvPhone = (TextView) view.findViewById(R.id.tvPhone);
-		btnLog = (Button) view.findViewById(R.id.btnLog);
+		btnLog = (ActionProcessButton) view.findViewById(R.id.btnLog);
 	}
 }

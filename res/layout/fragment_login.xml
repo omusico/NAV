@@ -70,27 +70,26 @@
     	flatui:cornerRadius="5dp"
     	flatui:fieldStyle="box"/>
 
-    <com.cengalabs.flatui.views.FlatButton
+    <com.dd.processbutton.iml.ActionProcessButton
         android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
-        android:layout_height="35dp"
+        android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/edtPassword"
         android:layout_alignRight="@+id/edtPassword"
         android:layout_below="@+id/edtPassword"
         android:layout_marginTop="20dp"
-        android:background="@drawable/theme_button"
         android:text="@string/login_log"
         android:textStyle="bold" 
-        flatui:theme="@array/hotpink"
-    	flatui:textAppearance="light"
-    	flatui:fontFamily="roboto"
-    	flatui:fontWeight="light"
-    	flatui:fontExtension="ttf"
-    	flatui:borderWidth="2dp"
-    	flatui:cornerRadius="5dp"
-    	flatui:blockButtonEffectHeight="3dp"
+        android:textColor="@color/white"
+	    flatui:pb_colorComplete="@color/green_complete"
+	    flatui:pb_colorNormal="@color/theme_bar"
+	    flatui:pb_colorProgress="@color/purple_progress"
+	    flatui:pb_textComplete="Success"
+	    flatui:pb_textProgress="Loggin..."
+	    flatui:pb_textError="Error"
+	    flatui:pb_colorError="@color/red_error"
         />
-    
+        
 	<com.cengalabs.flatui.views.FlatButton
         android:id="@+id/btnSignUp"
         android:layout_width="wrap_content"

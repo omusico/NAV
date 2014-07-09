@@ -2,6 +2,7 @@ package fragments;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
@@ -12,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.dd.processbutton.iml.ActionProcessButton;
 import com.example.nav.R;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
@@ -19,9 +21,8 @@ import com.parse.SignUpCallback;
 public class RegisterInfo extends Fragment {
 	
 	private EditText edtUserName, edtEmail, edtFirstName, edtLastName, edtPhone, edtPassword, edtPasswordAgain;
-	private Button btnCreateAccount;
+	private ActionProcessButton btnCreateAccount;
 	private TextView tvValidation;
-	private ProgressDialog pDialog;
 	private ParseUser user;
 	
 	@Override public void onCreate(Bundle savedInstanceState) {
@@ -47,6 +48,9 @@ public class RegisterInfo extends Fragment {
 			String password = edtPassword.getText().toString().trim();
 			String passwordAgain = edtPasswordAgain.getText().toString().trim();
 			
+			btnCreateAccount.setMode(ActionProcessButton.Mode.ENDLESS);
+			btnCreateAccount.setProgress(1);
+			
 			if(password.equals(passwordAgain) && checkEmpty(email) == true && checkEmpty(firstname) == true && 
 					checkEmpty(lastname) == true && checkEmpty(phone) == true && 
 					checkEmpty(password) == true && checkEmpty (passwordAgain) == true) {
@@ -59,22 +63,23 @@ public class RegisterInfo extends Fragment {
 				user.put("lastname", lastname);
 				
 				
-				pDialog = new ProgressDialog(getActivity());
-		        pDialog.setMessage("Registering...");
-		        pDialog.setIndeterminate(false);
-		        pDialog.setCancelable(true);
-		        pDialog.show();
 		        
 				user.signUpInBackground(new SignUpCallback() { 
 					@Override public void done(com.parse.ParseException e) {
 						if (e == null) {
-							pDialog.dismiss();
+							getFragmentManager().popBackStack("bRegister", getFragmentManager().POP_BACK_STACK_INCLUSIVE);
+							btnCreateAccount.setProgress(100);
 							FragmentTransaction ft = getFragmentManager().beginTransaction();
 						    ft.replace(R.id.content_frame, new Welcome(), "welcome");
 						    ft.commit();
 						} else {
-							pDialog.dismiss();
+							btnCreateAccount.setProgress(-1);
 							tvValidation.setText("Username already exists!");
+							Handler mHandler = new Handler();
+						    mHandler.postDelayed(new Runnable() { @Override public void run() {
+						    	btnCreateAccount.setProgress(0);
+						    } }, 1000);
+						    
 						}
 					}});
 			} else if (!password.equals(passwordAgain)){
@@ -93,7 +98,7 @@ public class RegisterInfo extends Fragment {
 		edtPhone = (EditText) view.findViewById(R.id.edtPhone);
 		edtPassword = (EditText) view.findViewById(R.id.edtPassword);
 		edtPasswordAgain = (EditText) view.findViewById(R.id.edtPasswordAgain);
-		btnCreateAccount = (Button) view.findViewById(R.id.btnCreateAccount);
+		btnCreateAccount = (ActionProcessButton) view.findViewById(R.id.btnCreateAccount);
 		tvValidation = (TextView) view.findViewById(R.id.tvValidation);
 	}
 	
