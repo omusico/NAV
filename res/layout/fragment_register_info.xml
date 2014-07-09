@@ -19,6 +19,7 @@
         android:text="Info"
         android:textStyle="bold"/>
     
+    
     <View 
         android:layout_width="fill_parent"
         android:layout_height="1.5dp"
@@ -30,76 +31,77 @@
         android:layout_height="wrap_content"
         android:orientation="vertical" >
     
-    <com.cengalabs.flatui.views.FlatEditText
+    <com.hardik.floatinglabel.FloatingLabelView
         android:id="@+id/edtFirstName"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="@string/register_firstname"
-        android:singleLine="true"
-        flatui:theme="@array/hotpinket"
-    	flatui:textAppearance="dark"
-    	flatui:fontFamily="roboto"
-    	flatui:fontWeight="light"
-    	flatui:fontExtension="ttf"
-    	flatui:borderWidth="0.5dp"
-    	flatui:cornerRadius="5dp"
-    	flatui:fieldStyle="box">
+        flatui:textColorf="@color/theme_bar"
+        flatui:textBackground="@drawable/edittext_rounded_corners"
+        flatui:floatHintText="@string/register_firstname"
+        flatui:floatHintTextColorFocused="@color/theme_bar"
+        flatui:floatHintTextColorUnFocused="@color/red"
+        flatui:floatHintTextGravity="left"
+        flatui:floatHintTextSize="8"
+        flatui:textSize="18"/>   
+        
+<!--     <com.cengalabs.flatui.views.FlatEditText -->
+<!--         android:id="@+id/edtFirstName" -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:layout_marginTop="10dp" -->
+<!--         android:ems="10" -->
+<!--         android:hint="@string/register_firstname" -->
+<!--         android:singleLine="true" -->
+<!--         flatui:theme="@array/hotpinket" -->
+<!--     	flatui:textAppearance="dark" -->
+<!--     	flatui:fontFamily="roboto" -->
+<!--     	flatui:fontWeight="light" -->
+<!--     	flatui:fontExtension="ttf" -->
+<!--     	flatui:borderWidth="0.5dp" -->
+<!--     	flatui:cornerRadius="5dp" -->
+<!--     	flatui:fieldStyle="box"> -->
 
-        <requestFocus />
-    </com.cengalabs.flatui.views.FlatEditText>
+<!--         <requestFocus /> -->
+<!--     </com.cengalabs.flatui.views.FlatEditText> -->
     
-    <com.cengalabs.flatui.views.FlatEditText
+    <com.hardik.floatinglabel.FloatingLabelView
         android:id="@+id/edtLastName"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="@string/register_lastname"
-        android:singleLine="true" 
-        flatui:theme="@array/hotpinket"
-    	flatui:textAppearance="dark"
-    	flatui:fontFamily="roboto"
-    	flatui:fontWeight="light"
-    	flatui:fontExtension="ttf"
-    	flatui:borderWidth="0.5dp"
-    	flatui:cornerRadius="5dp"
-    	flatui:fieldStyle="box"/>
+        flatui:textColorf="@color/theme_bar"
+        flatui:textBackground="@drawable/edittext_rounded_corners"
+        flatui:floatHintText="@string/register_lastname"
+        flatui:floatHintTextColorFocused="@color/theme_bar"
+        flatui:floatHintTextColorUnFocused="@color/red"
+        flatui:floatHintTextGravity="left"
+        flatui:floatHintTextSize="8"
+        flatui:textSize="18"/>
     
-    <com.cengalabs.flatui.views.FlatEditText
+    <com.hardik.floatinglabel.FloatingLabelView
         android:id="@+id/edtPhone"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="@string/register_phone"
-        android:singleLine="true" 
-        flatui:theme="@array/hotpinket"
-    	flatui:textAppearance="dark"
-    	flatui:fontFamily="roboto"
-    	flatui:fontWeight="light"
-    	flatui:fontExtension="ttf"
-    	flatui:borderWidth="0.5dp"
-    	flatui:cornerRadius="5dp"
-    	flatui:fieldStyle="box"/>
+        flatui:textColorf="@color/theme_bar"
+        flatui:textBackground="@drawable/edittext_rounded_corners"
+        flatui:floatHintText="@string/register_phone"
+        flatui:floatHintTextColorFocused="@color/theme_bar"
+        flatui:floatHintTextColorUnFocused="@color/red"
+        flatui:floatHintTextGravity="left"
+        flatui:floatHintTextSize="8"
+        flatui:textSize="18"/>
 
-    <com.cengalabs.flatui.views.FlatEditText
+    <com.hardik.floatinglabel.FloatingLabelView
         android:id="@+id/edtEmail"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="@string/register_email"
-        android:singleLine="true" 
-        flatui:theme="@array/hotpinket"
-    	flatui:textAppearance="dark"
-    	flatui:fontFamily="roboto"
-    	flatui:fontWeight="light"
-    	flatui:fontExtension="ttf"
-    	flatui:borderWidth="0.5dp"
-    	flatui:cornerRadius="5dp"
-    	flatui:fieldStyle="box"/>
+        flatui:textColorf="@color/theme_bar"
+        flatui:textBackground="@drawable/edittext_rounded_corners"
+        flatui:floatHintText="@string/register_email"
+        flatui:floatHintTextColorFocused="@color/theme_bar"
+        flatui:floatHintTextColorUnFocused="@color/red"
+        flatui:floatHintTextGravity="left"
+        flatui:floatHintTextSize="8"
+        flatui:textSize="18"/>
     
     <TextView
         android:id="@+id/passwords"
@@ -117,56 +119,44 @@
         android:background="@color/hotpink_dark"
         />
     
-    <com.cengalabs.flatui.views.FlatEditText
+    <com.hardik.floatinglabel.FloatingLabelView
         android:id="@+id/edtUserName"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="@string/register_username"
-        android:singleLine="true" 
-        flatui:theme="@array/hotpinket"
-    	flatui:textAppearance="dark"
-    	flatui:fontFamily="roboto"
-    	flatui:fontWeight="light"
-    	flatui:fontExtension="ttf"
-    	flatui:borderWidth="0.5dp"
-    	flatui:cornerRadius="5dp"
-    	flatui:fieldStyle="box"/>
+        flatui:textColorf="@color/theme_bar"
+        flatui:textBackground="@drawable/edittext_rounded_corners"
+        flatui:floatHintText="@string/register_username"
+        flatui:floatHintTextColorFocused="@color/theme_bar"
+        flatui:floatHintTextColorUnFocused="@color/red"
+        flatui:floatHintTextGravity="left"
+        flatui:floatHintTextSize="8"
+        flatui:textSize="18"/>
     
-    <com.cengalabs.flatui.views.FlatEditText
+    <com.hardik.floatinglabel.FloatingLabelView
         android:id="@+id/edtPassword"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="@string/register_password"
-        android:singleLine="true" 
-        flatui:theme="@array/hotpinket"
-    	flatui:textAppearance="dark"
-    	flatui:fontFamily="roboto"
-    	flatui:fontWeight="light"
-    	flatui:fontExtension="ttf"
-    	flatui:borderWidth="0.5dp"
-    	flatui:cornerRadius="5dp"
-    	flatui:fieldStyle="box"/>
+        flatui:textColorf="@color/theme_bar"
+        flatui:textBackground="@drawable/edittext_rounded_corners"
+        flatui:floatHintText="@string/register_password"
+        flatui:floatHintTextColorFocused="@color/theme_bar"
+        flatui:floatHintTextColorUnFocused="@color/red"
+        flatui:floatHintTextGravity="left"
+        flatui:floatHintTextSize="8"
+        flatui:textSize="18"/>
     
-    <com.cengalabs.flatui.views.FlatEditText
+    <com.hardik.floatinglabel.FloatingLabelView
         android:id="@+id/edtPasswordAgain"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="@string/register_againpassword"
-        android:singleLine="true" 
-        flatui:theme="@array/hotpinket"
-    	flatui:textAppearance="dark"
-    	flatui:fontFamily="roboto"
-    	flatui:fontWeight="light"
-    	flatui:fontExtension="ttf"
-    	flatui:borderWidth="0.5dp"
-    	flatui:cornerRadius="5dp"
-    	flatui:fieldStyle="box"/>
+        flatui:textColorf="@color/theme_bar"
+        flatui:textBackground="@drawable/edittext_rounded_corners"
+        flatui:floatHintText="@string/register_againpassword"
+        flatui:floatHintTextColorFocused="@color/theme_bar"
+        flatui:floatHintTextColorUnFocused="@color/red"
+        flatui:floatHintTextGravity="left"
+        flatui:floatHintTextSize="8"
+        flatui:textSize="18"/>
     
     <View 
         android:layout_width="fill_parent"

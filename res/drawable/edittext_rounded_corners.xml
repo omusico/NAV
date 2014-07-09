@@ -4,42 +4,43 @@
 
 <item android:state_pressed="true" android:state_focused="true">
     <shape>
+        
         <solid android:color="#f86b59"/>
         <corners
-            android:radius="10dp" />
+            android:radius="5dp" />
     </shape>
 </item>
 
 <item android:state_pressed="true" android:state_focused="false">
     <shape>
-        <stroke android:width="1dp" android:color="@color/theme_bar"/>
+        <stroke android:width="0.5dp" android:color="@color/theme_bar"/>
         <solid android:color="#f86b59"/>     
         <corners
-            android:radius="10dp" />       
+            android:radius="5dp" />       
     </shape>
 </item>
 
 <item android:state_pressed="false" android:state_focused="true">
     <shape>
-        <stroke android:width="1dp" android:color="@color/theme_bar"/>
+        <stroke android:width="0.5dp" android:color="@color/theme_bar"/>
         <solid android:color="#FFFFFF"/>
         <corners
-            android:radius="10dp" />                          
+            android:radius="5dp" />                          
     </shape>
 </item>
 
 <item android:state_pressed="false" android:state_focused="false">
     <shape>
-        <stroke android:width="1dp" android:color="@color/theme_bar"/>
+        <stroke android:width="0.5dp" android:color="@color/theme_bar"/>
         <solid android:color="#FFFFFF"/>
         <corners
-            android:radius="10dp" />            
+            android:radius="5dp" />            
     </shape>
 </item>
 
 <item android:state_enabled="true">
     <shape>
-        <stroke android:width="1dp" android:color="@color/theme_bar"/>
+        <stroke android:width="0.5dp" android:color="@color/theme_bar"/>
         <padding 
                 android:left="4dp"
                 android:top="4dp"

@@ -1,6 +1,5 @@
 package fragments;
 
-import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -9,18 +8,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.dd.processbutton.iml.ActionProcessButton;
 import com.example.nav.R;
+import com.hardik.floatinglabel.FloatingLabelView;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 
 public class RegisterInfo extends Fragment {
 	
-	private EditText edtUserName, edtEmail, edtFirstName, edtLastName, edtPhone, edtPassword, edtPasswordAgain;
+	private FloatingLabelView edtFirstName, edtEmail, edtUserName, edtLastName, edtPhone, edtPassword, edtPasswordAgain;
 	private ActionProcessButton btnCreateAccount;
 	private TextView tvValidation;
 	private ParseUser user;
@@ -40,6 +39,7 @@ public class RegisterInfo extends Fragment {
 
 	private void setupListeners() {
 		btnCreateAccount.setOnClickListener(new OnClickListener() { @Override public void onClick(View v) {
+			btnCreateAccount.setEnabled(false);
 			String email = edtEmail.getText().toString().trim();
 			String firstname = edtFirstName.getText().toString().trim();
 			String lastname = edtLastName.getText().toString().trim();
@@ -78,26 +78,39 @@ public class RegisterInfo extends Fragment {
 							Handler mHandler = new Handler();
 						    mHandler.postDelayed(new Runnable() { @Override public void run() {
 						    	btnCreateAccount.setProgress(0);
+						    	btnCreateAccount.setEnabled(true);
 						    } }, 1000);
 						    
 						}
 					}});
 			} else if (!password.equals(passwordAgain)){
 				tvValidation.setText("Passwords must match!");
+				btnCreateAccount.setProgress(-1);
+				Handler mHandler = new Handler();
+			    mHandler.postDelayed(new Runnable() { @Override public void run() {
+			    	btnCreateAccount.setProgress(0);
+			    	btnCreateAccount.setEnabled(true);
+			    } }, 1000);
 			} else {
 				tvValidation.setText("Please fill in the blanks!");
+				btnCreateAccount.setProgress(-1);
+				Handler mHandler = new Handler();
+			    mHandler.postDelayed(new Runnable() { @Override public void run() {
+			    	btnCreateAccount.setProgress(0);
+			    	btnCreateAccount.setEnabled(true);
+			    } }, 1000);
 			}
 		}});
 	}
 
 	private void setupViews(View view) {
-		edtUserName = (EditText) view.findViewById(R.id.edtUserName);
-		edtEmail = (EditText) view.findViewById(R.id.edtEmail);
-		edtFirstName = (EditText) view.findViewById(R.id.edtFirstName);
-		edtLastName = (EditText) view.findViewById(R.id.edtLastName);
-		edtPhone = (EditText) view.findViewById(R.id.edtPhone);
-		edtPassword = (EditText) view.findViewById(R.id.edtPassword);
-		edtPasswordAgain = (EditText) view.findViewById(R.id.edtPasswordAgain);
+		edtUserName = (FloatingLabelView) view.findViewById(R.id.edtUserName);
+		edtEmail = (FloatingLabelView) view.findViewById(R.id.edtEmail);
+		edtFirstName = (FloatingLabelView) view.findViewById(R.id.edtFirstName);
+		edtLastName = (FloatingLabelView) view.findViewById(R.id.edtLastName);
+		edtPhone = (FloatingLabelView) view.findViewById(R.id.edtPhone);
+		edtPassword = (FloatingLabelView) view.findViewById(R.id.edtPassword);
+		edtPasswordAgain = (FloatingLabelView) view.findViewById(R.id.edtPasswordAgain);
 		btnCreateAccount = (ActionProcessButton) view.findViewById(R.id.btnCreateAccount);
 		tvValidation = (TextView) view.findViewById(R.id.tvValidation);
 	}

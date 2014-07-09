@@ -49,6 +49,7 @@ public class Login extends Fragment {
 			ft.commit();
 		}});
 		btnLogin.setOnClickListener(new OnClickListener() { @Override public void onClick(View v) {
+			btnLogin.setEnabled(false);
 			btnLogin.setMode(ActionProcessButton.Mode.ENDLESS);
 			btnLogin.setProgress(1);
 			ParseUser.logInInBackground(edtUserName.getText().toString().trim(), edtPassword.getText().toString().trim(), new LogInCallback() {
@@ -57,6 +58,7 @@ public class Login extends Fragment {
 				FragmentTransaction ft = getFragmentManager().beginTransaction();
 				ft.replace(R.id.content_frame, new Welcome(), "welcome");
 				ft.commit();
+				btnLogin.setEnabled(true);
 			}});	
 		}});
 	}
