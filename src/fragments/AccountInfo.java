@@ -13,7 +13,7 @@ import com.dd.processbutton.iml.ActionProcessButton;
 import com.example.nav.R;
 import com.parse.ParseUser;
 
-public class Welcome extends Fragment {
+public class AccountInfo extends Fragment {
 	
 	private TextView tvEmail, tvFirstName, tvLastName, tvPhone;
 	private ActionProcessButton btnLog;
@@ -48,9 +48,9 @@ public class Welcome extends Fragment {
 	private void setupValues() {
 		if (currentUser != null) {
 		  tvEmail.setText(currentUser.getEmail());
-		  tvFirstName.setText(currentUser.get("phone").toString());
-		  tvLastName.setText(currentUser.get("firstname").toString());
-		  tvPhone.setText(currentUser.get("lastname").toString());
+		  tvPhone.setText(currentUser.get("phone").toString());
+		  tvFirstName.setText(currentUser.get("firstname").toString());
+		  tvLastName.setText(currentUser.get("lastname").toString());
 		} else {
 		  FragmentTransaction ft = getFragmentManager().beginTransaction();
 		  ft.replace(R.id.content_frame, new Login(), "login");

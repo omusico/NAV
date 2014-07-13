@@ -29,7 +29,12 @@
     <string name="about_description">Welcome to the New Age of Valet services!</string>
     <string name="about_feature_title">Implemented Features</string>
     <string name="about_features"><![CDATA[
-		*Navigation drawer!\n*User can sign in or signup using Parse Services.\n*Log-out through the menu\n*Exit app on backpress\n*Viewpager with Pagerstrip Icons!\n
+		*Navigation drawer!\n*User can sign in or signup using Parse Services.\n
+		*Log-out through the menu\n
+		*Exit app on backpress\n
+		*Viewpager with Pagerstrip Icons!\n
+		*Actionbar has a "+" button to add new tickets!\n
+		*All form fields have a label floater for the edittext box'&apos;s hint
 		]]>
 	</string>
     <string name="about_creators">Developers: Quan + Perry</string>

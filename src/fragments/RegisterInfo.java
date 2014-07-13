@@ -70,7 +70,7 @@ public class RegisterInfo extends Fragment {
 							getFragmentManager().popBackStack("bRegister", getFragmentManager().POP_BACK_STACK_INCLUSIVE);
 							btnCreateAccount.setProgress(100);
 							FragmentTransaction ft = getFragmentManager().beginTransaction();
-						    ft.replace(R.id.content_frame, new Welcome(), "welcome");
+						    ft.replace(R.id.content_frame, new AccountInfo(), "welcome");
 						    ft.commit();
 						} else {
 							btnCreateAccount.setProgress(-1);

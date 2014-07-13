@@ -35,7 +35,7 @@ public class Login extends Fragment {
 			setupListeners();
 		} else {
 			FragmentTransaction ft = getFragmentManager().beginTransaction();
-			ft.replace(R.id.content_frame, new Welcome(), "welcome");
+			ft.replace(R.id.content_frame, new AccountInfo(), "welcome");
 			ft.commit();
 		}
 		return view;
@@ -56,7 +56,7 @@ public class Login extends Fragment {
 			@Override public void done(ParseUser user, com.parse.ParseException e) {
 				btnLogin.setProgress(100);
 				FragmentTransaction ft = getFragmentManager().beginTransaction();
-				ft.replace(R.id.content_frame, new Welcome(), "welcome");
+				ft.replace(R.id.content_frame, new AccountInfo(), "welcome");
 				ft.commit();
 				btnLogin.setEnabled(true);
 			}});	

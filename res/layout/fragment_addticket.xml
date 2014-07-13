@@ -123,7 +123,8 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="1.5dp">
 		<RadioGroup 
 		    android:id="@+id/carRadioGroup"
 		    android:layout_width="fill_parent"
@@ -209,15 +210,14 @@
             android:layout_gravity="center_vertical"
             android:background="@drawable/ic_color"/>
         
-        <com.hardik.floatinglabel.FloatingLabelView
+        <TextView
             android:id="@+id/ticketcolor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:editable="false"
-            android:focusable="false"
-            android:hint="@string/ticket_color"
+            android:layout_gravity="center"
             android:singleLine="true"
             android:textColor="@color/gray"
+            android:textStyle="bold"
             android:textSize="12dp" />
         
     </LinearLayout>
@@ -280,7 +280,7 @@
 	    custom:pb_colorNormal="@color/theme_bar"
 	    custom:pb_colorProgress="@color/purple_progress"
 	    custom:pb_textComplete="Success"
-	    custom:pb_textProgress="Creating..."
+	    custom:pb_textProgress="Adding Ticket..."
 	    custom:pb_textError="Error"
 	    custom:pb_colorError="@color/red_error"/>
     
