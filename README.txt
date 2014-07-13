@@ -1,5 +1,20 @@
-Imported appcompat v7 to this project.  The library project will be gitignored for the sake of brevity in the repo.
+#NAV (New Age Valet)
+NAV is simply defined as: New Age Valet. This Android Application is a re-branded version of Vroom with a huge UI/UX design overhaul. The back-end has also been swapped for a more robust cloud management system using Parse.
 
-Use this link to setup library:
-https://developer.android.com/tools/support-library/setup.html#libs-with-res
+###Time Spent: 
+Not finished yet...
 
+###Current Features:
+![alt text](http://forum.bodybuilding.com/attachment.php?attachmentid=4854623&d=1346914394 "check")Navigation drawer implemented!
+
+![alt text](http://forum.bodybuilding.com/attachment.php?attachmentid=4854623&d=1346914394 "check")User can login or signup for an account.
+
+![alt text](http://forum.bodybuilding.com/attachment.php?attachmentid=4854623&d=1346914394 "check")User can add new tickets with the actionbar menu "+" button
+
+![alt text](http://forum.bodybuilding.com/attachment.php?attachmentid=4854623&d=1346914394 "check")Inventory displays all tickets that were added (Adding a new ticket does not refresh the list automatically yet)
+		
+###Notes/Issues:
+Various third party libraries has been added, if you run into trouble installing it on your machine, please message me (Quan)!
+
+###Sources:
+Many thid party libraries has been used. I will update this list at the completion of this project.
