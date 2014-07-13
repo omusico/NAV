@@ -33,4 +33,11 @@
 		]]>
 	</string>
     <string name="about_creators">Developers: Quan + Perry</string>
+    <string name="ticket_serial">Serial Number</string>
+    <string name="ticket_name">Name</string>
+    <string name="ticket_model">Model</string>
+    <string name="ticket_license">License Number</string>
+    <string name="ticket_color">Color</string>
+    <string name="ticket_park">Park Location</string>
+    <string name="ticket_key">Key Location</string>
 </resources>

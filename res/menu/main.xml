@@ -3,5 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.nav.MainActivity" >
 
+    <item
+        android:id="@+id/addTicket"
+        android:orderInCategory="1"
+        android:icon="@drawable/ic_action_add"
+        app:showAsAction="always"/>
 
 </menu>

@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="22dp">
+    <TextView
+        android:id="@+id/ValetTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="New Valet Ticket"
+        android:textColor="@color/color_pomegranate"
+        android:textSize="22dp"
+        android:textStyle="bold|italic" />
+    
+	<ScrollView 
+    android:id="@+id/scrollbar"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fadeScrollbars="false"
+     >
+    
+	<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginRight="8dp"
+    android:layout_marginLeft="12dp"
+    android:layout_marginBottom="8dp"
+    >
+    <!-- Info Section -->
+
+    <TextView
+        android:id="@+id/infoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Identity"
+        android:textColor="@color/color_pomegranate"
+        android:textSize="14dp"
+        android:textStyle="bold|italic" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_pomegranate" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        
+		<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+		    <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="bottom"
+		        android:layout_marginBottom="4dp"
+		        android:text="@string/ticket_serial"
+		        android:textSize="12dp" />
+		    
+		    <EditText
+            android:id="@+id/ticketserial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="12dp"
+            android:textColor="@color/gray"
+            android:singleLine="true" >
+        	</EditText>
+		    
+		</LinearLayout>
+        
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+		    
+        <TextView 
+	       android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="bottom"
+           android:layout_marginBottom="4dp"
+           android:textSize="12dp"
+           android:text="@string/ticket_name"
+           />
+
+        <EditText
+            android:id="@+id/ticketname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="12dp"
+            android:textColor="@color/gray"
+            android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Date Section -->
+
+    <TextView
+        android:id="@+id/dateticket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Date In"
+        android:textColor="@color/color_pomegranate"
+        android:textSize="14dp"
+        android:textStyle="bold|italic" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_pomegranate" />
+
+    <TextView
+        android:id="@+id/ticketdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Date"
+        android:textSize="12dp"
+        android:textColor="@color/gray"/>
+
+    <!-- Car Info Section -->
+
+    <TextView
+        android:id="@+id/carinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Car Info"
+        android:textColor="@color/color_pomegranate"
+        android:textSize="14dp"
+        android:textStyle="bold|italic" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_pomegranate" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:layout_marginTop="10dp"
+        >
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">"
+		<RadioGroup 
+		    android:id="@+id/carRadioGroup"
+		    android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+
+		    <RadioButton
+		        android:id="@+id/sedanradio"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/sedan_radio_button"
+		        android:button="@android:color/transparent"
+		        />
+		    <RadioButton
+		        android:id="@+id/sportradio"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/sportcar_radio_button"
+		        android:button="@android:color/transparent"
+		        />
+		    <RadioButton
+		        android:id="@+id/vanradio"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/van_radio_button"
+		        android:button="@android:color/transparent"
+		        />
+		    <RadioButton
+		        android:id="@+id/truckradio"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/truck_radio_button"
+		        android:button="@android:color/transparent"
+		        />
+		    <RadioButton
+		        android:id="@+id/bikeradio"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/bike_radio_button"
+		        android:button="@android:color/transparent"
+		        />
+		    
+        </RadioGroup>
+        </LinearLayout>
+        
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="4dp"
+            android:text="@string/ticket_model"
+            android:textSize="12dp" />
+            
+        <EditText
+            android:id="@+id/ticketmodel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:textColor="@color/gray" 
+            android:singleLine="true">
+        </EditText>
+        
+        </LinearLayout>
+        
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="4dp"
+            android:text="@string/ticket_license"
+            android:textSize="12dp" />
+        
+        <EditText
+            android:id="@+id/ticketlicense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:textColor="@color/gray" 
+            android:singleLine="true">
+        </EditText>
+        
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="bottom">
+            
+            <ImageButton 
+                android:id="@+id/colorwheel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ic_color"
+                android:layout_marginLeft="10dp"/>
+            
+            <EditText
+                android:id="@+id/ticketcolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:focusable="false"
+                android:hint="@string/ticket_color"
+                android:singleLine="true"
+                android:textColor="@color/gray"
+                android:textSize="12dp" />
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+
+    <!-- Storage Info Section -->
+
+    <TextView
+        android:id="@+id/storageinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Storage Info"
+        android:textColor="@color/color_pomegranate"
+        android:textSize="14dp"
+        android:textStyle="bold|italic" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_pomegranate" />
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="4dp"
+            android:text="@string/ticket_park"
+            android:textSize="12dp" />
+        
+        <EditText
+            android:id="@+id/ticketparklocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="12dp"
+            android:textColor="@color/gray"
+            android:singleLine="true" >
+        </EditText>
+        
+		</LinearLayout>
+		
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="4dp"
+            android:text="@string/ticket_key"
+            android:textSize="12dp" />
+        
+        <EditText
+            android:id="@+id/ticketkeylocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="12dp"
+            android:textColor="@color/gray"
+            android:singleLine="true" />
+        </LinearLayout>
+        
+    </LinearLayout>
+    <Button 
+	    android:id="@+id/ticketsubmit"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="Add Ticket"
+	    android:textColor="@color/white"
+	    android:textStyle="bold"
+	    android:layout_gravity="center" 
+	    android:layout_margin="10dp"
+	    android:paddingLeft="25dp"
+	    android:paddingRight="25dp"/>
+    
+</LinearLayout>
+</ScrollView>
+	
+</LinearLayout>

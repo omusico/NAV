@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:layout_margin="15dp">
+    
+    <LinearLayout 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="center">
+    
+     <ImageButton
+        android:id="@+id/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_black"
+        android:layout_margin="8dp" />
+        
+    <ImageButton
+        android:id="@+id/silver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_silver"
+        android:layout_margin="8dp" />
+    
+    <ImageButton
+        android:id="@+id/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_white"
+        android:layout_margin="8dp" />
+        
+    </LinearLayout>
+
+    <LinearLayout 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="center">
+    
+     <ImageButton
+        android:id="@+id/red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_red"
+        android:layout_margin="8dp" />
+        
+    <ImageButton
+        android:id="@+id/orange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_orange"
+        android:layout_margin="8dp" />
+    
+    <ImageButton
+        android:id="@+id/gold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_gold"
+        android:layout_margin="8dp" />
+        
+    </LinearLayout>
+    
+    <LinearLayout 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="center">
+    
+     <ImageButton
+        android:id="@+id/green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_green"
+        android:layout_margin="8dp" />
+        
+    <ImageButton
+        android:id="@+id/neon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_neon"
+        android:layout_margin="8dp" />
+    
+    <ImageButton
+        android:id="@+id/yellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_yellow"
+        android:layout_margin="8dp" />
+        
+    </LinearLayout>
+    
+    <LinearLayout 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="center">
+    
+     <ImageButton
+        android:id="@+id/navy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_navy"
+        android:layout_margin="8dp" />
+        
+    <ImageButton
+        android:id="@+id/blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_blue"
+        android:layout_margin="8dp" />
+    
+    <ImageButton
+        android:id="@+id/teal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_teal"
+        android:layout_margin="8dp" />
+        
+    </LinearLayout>
+    
+    <LinearLayout 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="center">
+    
+     <ImageButton
+        android:id="@+id/purple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_purple"
+        android:layout_margin="8dp" />
+        
+    <ImageButton
+        android:id="@+id/violet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_violet"
+        android:layout_margin="8dp" />
+    
+    <ImageButton
+        android:id="@+id/pink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_pink"
+        android:layout_margin="8dp" />
+        
+    </LinearLayout>
+    
+    <LinearLayout 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="center">
+    
+     <ImageButton
+        android:id="@+id/brown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_brown"
+        android:layout_margin="8dp" />
+        
+    <ImageButton
+        android:id="@+id/rose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_rose"
+        android:layout_margin="8dp" />
+    
+    <ImageButton
+        android:id="@+id/lightpink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_lightpink"
+        android:layout_margin="8dp" />
+        
+    </LinearLayout>
+    <ImageButton
+        android:id="@+id/gradient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_gradient"
+        android:layout_gravity="center"
+        android:layout_margin="8dp" />
+    
+</LinearLayout>

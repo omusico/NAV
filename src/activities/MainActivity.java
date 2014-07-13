@@ -13,15 +13,18 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.cengalabs.flatui.FlatUI;
 import com.example.nav.R;
 
 import fragments.About;
+import fragments.AddTicket;
 import fragments.Login;
 import fragments.NavViewPager;
 
@@ -154,6 +157,13 @@ public class MainActivity extends ActionBarActivity {
     }
 	@Override public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.main, menu);
+		MenuItem addTicket = menu.findItem(R.id.addTicket);	
+		addTicket.setOnMenuItemClickListener(new OnMenuItemClickListener() { @Override public boolean onMenuItemClick(MenuItem item) {
+			AddTicket addTicket = new AddTicket();
+			addTicket.show(getSupportFragmentManager(), "add");
+			return true;
+		}});
+		
 		return true;
 	}
 	@Override public void setTitle(CharSequence title) {
@@ -161,7 +171,6 @@ public class MainActivity extends ActionBarActivity {
 	}
 	// ****** END NAVIGATION DRAWER CODE ******
 	// ****************************************
-	
 	
 	// ****** START EXIT CODE ******
 	// *****************************
