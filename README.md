@@ -5,8 +5,6 @@ This Android Application is a re-branded version of Vroom with a huge UI/UX desi
 Not finished yet...
 
 ###Current Features:
-![alt text](http://forum.bodybuilding.com/attachment.php?attachmentid=4854623&d=1346914394 "check")Navigation drawer implemented!
-
 ![alt text](http://forum.bodybuilding.com/attachment.php?attachmentid=4854623&d=1346914394 "check")User can login or signup for an account.
 
 ![alt text](http://forum.bodybuilding.com/attachment.php?attachmentid=4854623&d=1346914394 "check")User can add new tickets with the actionbar menu "+" button
