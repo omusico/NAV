@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp" >
+
+    <ImageView
+        android:id="@+id/ivType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/vColor"
+        android:background="@drawable/car_sedanon" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ivType"
+        android:layout_toRightOf="@+id/ivType"
+        android:text="Name of playa"
+        android:textColor="@color/theme_bar"
+        android:textSize="8dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvPark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvName"
+        android:layout_alignBottom="@+id/tvName"
+        android:layout_alignParentRight="true"
+        android:text="Lot B"
+        android:textColor="@color/color_pomegranate"
+        android:textSize="8dp"
+        android:textStyle="bold"
+        android:layout_marginRight="10dp" />
+
+    <TextView
+        android:id="@+id/tvKey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvModel"
+        android:layout_alignParentRight="true"
+        android:text="Shelf 3"
+        android:textColor="@color/color_pomegranate"
+        android:textSize="8dp"
+        android:textStyle="bold" 
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/tvModel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvSerial"
+        android:layout_below="@+id/tvSerial"
+        android:text="Model of car"
+        android:textColor="@color/gray"
+        android:textSize="10dp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/tvSerial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvName"
+        android:layout_toRightOf="@+id/ivType"
+        android:text="Ticket Serial 123"
+        android:textColor="@color/theme_bar"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/vColor"
+        android:layout_width="10dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:background="@color/rose" />
+    
+</RelativeLayout>
