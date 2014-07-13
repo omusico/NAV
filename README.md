@@ -1,5 +1,5 @@
 #NAV (New Age Valet)
-NAV is simply defined as: New Age Valet. This Android Application is a re-branded version of Vroom with a huge UI/UX design overhaul. The back-end has also been swapped for a more robust cloud management system using Parse.
+This Android Application is a re-branded version of Vroom with a huge UI/UX design overhaul. The back-end has also been swapped for a more robust cloud management system using Parse.
 
 ###Time Spent: 
 Not finished yet...
@@ -17,4 +17,4 @@ Not finished yet...
 Various third party libraries has been added, if you run into trouble installing it on your machine, please message me (Quan)!
 
 ###Sources:
-Many thid party libraries has been used. I will update this list at the completion of this project.
+Many third party libraries has been used. An updated list of libraries will be composed at the completion of this project.
