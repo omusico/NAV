@@ -10,6 +10,8 @@ import com.astuetz.PagerSlidingTabStrip.IconTabProvider;
 import com.example.nav.R;
 
 import fragments.Inventory;
+import fragments.Staff;
+import fragments.Task;
 
 public class MyPagerAdapter extends FragmentPagerAdapter implements IconTabProvider {
 
@@ -23,25 +25,22 @@ public class MyPagerAdapter extends FragmentPagerAdapter implements IconTabProvi
 			return ICONS[position];
 		}
 	
-	public MyPagerAdapter(FragmentManager fm, Context c) {
+	public MyPagerAdapter(FragmentManager fm) {
 		super(fm);
-		this.c = c;
 	}
 
-	@Override
-	public int getCount() {
+	@Override public int getCount() {
 		return ICONS.length;
 	}
 
-	@Override
-	public Fragment getItem(int index) {
+	@Override public Fragment getItem(int index) {
 		switch (index) {
         case 0:
         	return new Inventory();
         case 1:
-            return new Inventory();
+            return new Staff();
         case 2:
-            return new Inventory();
+            return new Task();
         }
         return null;
 	}

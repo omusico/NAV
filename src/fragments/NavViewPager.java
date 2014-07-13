@@ -19,7 +19,7 @@ public class NavViewPager extends Fragment {
 	
 	@Override public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		adapter = new MyPagerAdapter(getChildFragmentManager(), getActivity());
+		adapter = new MyPagerAdapter(getChildFragmentManager());
 	}
 	
 	@Override public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
