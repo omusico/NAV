@@ -21,6 +21,7 @@ import android.widget.TextView;
 import com.cengalabs.flatui.FlatUI;
 import com.example.nav.R;
 
+import fragments.About;
 import fragments.Login;
 import fragments.NavViewPager;
 
@@ -122,7 +123,8 @@ public class MainActivity extends ActionBarActivity {
 			ft.commit();
 			break;
 		case 1:
-			//About Fragment Transaction here!
+			ft.replace(R.id.content_frame, new About(), "about");
+			ft.commit();
 			break;
 		case 2:
 			//Working but we do not need to load the login page anymore after a user logins (Hidden Navigation Menu Implemented)!

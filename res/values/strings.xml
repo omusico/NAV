@@ -24,5 +24,13 @@
     <string name="register_createaccount">Create Account</string>
     <string name="register_email"><i>Email</i></string>
     <string name="register_username"><i>Username</i></string>
-
+    
+    <string name="about_title">New Age Valet</string>
+    <string name="about_description">Welcome to the New Age of Valet services!</string>
+    <string name="about_feature_title">Implemented Features</string>
+    <string name="about_features"><![CDATA[
+		*Navigation drawer!\n*User can sign in or signup using Parse Services.\n*Log-out through the menu\n*Exit app on backpress\n*Viewpager with Pagerstrip Icons!\n
+		]]>
+	</string>
+    <string name="about_creators">Developers: Quan + Perry</string>
 </resources>
