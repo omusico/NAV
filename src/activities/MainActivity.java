@@ -171,7 +171,7 @@ public class MainActivity extends ActionBarActivity {
 		new AlertDialog.Builder(this)
         .setIcon(android.R.drawable.ic_dialog_alert)
         .setTitle("Exit NAV")
-        .setMessage("This will exit and log you out!")
+        .setMessage("Exit NAV?")
         .setPositiveButton("Yes", new DialogInterface.OnClickListener(){ @Override public void onClick(DialogInterface dialog, int which) {
             finish();    
          }})
