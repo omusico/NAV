@@ -2,49 +2,38 @@ package fragments;
 
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Locale;
 
-import org.apache.http.NameValuePair;
-import org.apache.http.message.BasicNameValuePair;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import com.example.nav.R;
-
 import android.app.Activity;
-import android.app.ProgressDialog;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.WindowManager.LayoutParams;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.WindowManager.LayoutParams;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.dd.processbutton.iml.ActionProcessButton;
+import com.example.nav.R;
+import com.hardik.floatinglabel.FloatingLabelView;
+
 public class AddTicket extends DialogFragment implements OnClickListener {
 
 
 	private TextView ticketdate;
-	private Button ticketSubmit;
+	private ActionProcessButton ticketSubmit;
 	private ScrollView scrolly;
-	private EditText ticketSerial, ticketName, ticketModel, 
+	private FloatingLabelView ticketSerial, ticketName, ticketModel, 
 			 ticketColor, ticketLicense, ticketPark, ticketKey;
 	private RadioButton sedanRadio, sportRadio, vanRadio, truckRadio, bikeRadio;
 	private ImageView colorWheel;
@@ -67,8 +56,8 @@ public class AddTicket extends DialogFragment implements OnClickListener {
 		View view = inflater.inflate(R.layout.fragment_addticket, container, false);
 	
 		scrolly = (ScrollView) view.findViewById(R.id.scrollbar);
-		ticketSerial = (EditText) view.findViewById(R.id.ticketserial);
-		ticketName = (EditText) view.findViewById(R.id.ticketname);
+		ticketSerial = (FloatingLabelView) view.findViewById(R.id.ticketserial);
+		ticketName = (FloatingLabelView) view.findViewById(R.id.ticketname);
 		ticketdate = (TextView) view.findViewById(R.id.ticketdate);
 		
 		sedanRadio = (RadioButton) view.findViewById(R.id.sedanradio);
@@ -77,12 +66,12 @@ public class AddTicket extends DialogFragment implements OnClickListener {
 		truckRadio = (RadioButton) view.findViewById(R.id.truckradio);
 		bikeRadio = (RadioButton) view.findViewById(R.id.bikeradio);
 		
-		ticketModel = (EditText) view.findViewById(R.id.ticketmodel);
-		ticketColor = (EditText) view.findViewById(R.id.ticketcolor);
-		ticketLicense = (EditText) view.findViewById(R.id.ticketlicense);
-		ticketPark = (EditText) view.findViewById(R.id.ticketparklocation);
-		ticketKey = (EditText) view.findViewById(R.id.ticketkeylocation);
-		ticketSubmit = (Button) view.findViewById(R.id.ticketsubmit);
+		ticketModel = (FloatingLabelView) view.findViewById(R.id.ticketmodel);
+		ticketColor = (FloatingLabelView) view.findViewById(R.id.ticketcolor);
+		ticketLicense = (FloatingLabelView) view.findViewById(R.id.ticketlicense);
+		ticketPark = (FloatingLabelView) view.findViewById(R.id.ticketparklocation);
+		ticketKey = (FloatingLabelView) view.findViewById(R.id.ticketkeylocation);
+		ticketSubmit = (ActionProcessButton) view.findViewById(R.id.ticketsubmit);
 		
 		colorWheel = (ImageView) view.findViewById(R.id.colorwheel);
 		

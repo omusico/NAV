@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_margin="22dp">
+    
     <TextView
-        android:id="@+id/ValetTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="New Valet Ticket"
-        android:textColor="@color/color_pomegranate"
-        android:textSize="22dp"
-        android:textStyle="bold|italic" />
+    android:id="@+id/ValetTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:text="New Valet Ticket"
+    android:textColor="@color/color_pomegranate"
+    android:textSize="22dp"
+    android:textStyle="bold|italic" />
     
 	<ScrollView 
     android:id="@+id/scrollbar"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:fadeScrollbars="false"
-     >
+    android:fadeScrollbars="false">
     
 	<LinearLayout 
     android:layout_width="fill_parent"
@@ -27,8 +28,8 @@
     android:orientation="vertical"
     android:layout_marginRight="8dp"
     android:layout_marginLeft="12dp"
-    android:layout_marginBottom="8dp"
-    >
+    android:layout_marginBottom="8dp">
+    
     <!-- Info Section -->
 
     <TextView
@@ -45,61 +46,35 @@
         android:layout_width="fill_parent"
         android:layout_height="0.5dp"
         android:background="@color/color_pomegranate" />
+    
+    <com.hardik.floatinglabel.FloatingLabelView
+       android:id="@+id/ticketserial"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="10dp"
+       android:singleLine="true" 
+       custom:textColorf="@color/theme_bar"
+       custom:textBackground="@drawable/edittext_rounded_corners"
+       custom:floatHintText="@string/ticket_serial"
+       custom:floatHintTextColorFocused="@color/theme_bar"
+       custom:floatHintTextColorUnFocused="@color/red"
+       custom:floatHintTextGravity="left"
+       custom:floatHintTextSize="6"
+       custom:textSize="12"/>
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" >
-        
-		<LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-        
-		    <TextView
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_gravity="bottom"
-		        android:layout_marginBottom="4dp"
-		        android:text="@string/ticket_serial"
-		        android:textSize="12dp" />
-		    
-		    <EditText
-            android:id="@+id/ticketserial"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:textSize="12dp"
-            android:textColor="@color/gray"
-            android:singleLine="true" >
-        	</EditText>
-		    
-		</LinearLayout>
-        
-        <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-		    
-        <TextView 
-	       android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_gravity="bottom"
-           android:layout_marginBottom="4dp"
-           android:textSize="12dp"
-           android:text="@string/ticket_name"
-           />
-
-        <EditText
-            android:id="@+id/ticketname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:textSize="12dp"
-            android:textColor="@color/gray"
-            android:singleLine="true" />
-        </LinearLayout>
-    </LinearLayout>
+    <com.hardik.floatinglabel.FloatingLabelView
+       android:id="@+id/ticketname"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:singleLine="true" 
+       custom:textColorf="@color/theme_bar"
+       custom:textBackground="@drawable/edittext_rounded_corners"
+       custom:floatHintText="@string/ticket_name"
+       custom:floatHintTextColorFocused="@color/theme_bar"
+       custom:floatHintTextColorUnFocused="@color/red"
+       custom:floatHintTextGravity="left"
+       custom:floatHintTextSize="6"
+       custom:textSize="12"/>
 
     <!-- Date Section -->
 
@@ -144,24 +119,17 @@
         android:layout_width="fill_parent"
         android:layout_height="0.5dp"
         android:background="@color/color_pomegranate" />
-
+        
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" 
-        android:layout_marginTop="10dp"
-        >
-        
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:orientation="horizontal">"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal">
 		<RadioGroup 
 		    android:id="@+id/carRadioGroup"
 		    android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:orientation="horizontal">
-
+	        android:layout_height="fill_parent"
+	        android:orientation="horizontal">
+	
 		    <RadioButton
 		        android:id="@+id/sedanradio"
 		        android:layout_width="wrap_content"
@@ -197,84 +165,60 @@
 		        android:background="@drawable/bike_radio_button"
 		        android:button="@android:color/transparent"
 		        />
-		    
-        </RadioGroup>
-        </LinearLayout>
+      </RadioGroup>
+    </LinearLayout>
+    
+    <com.hardik.floatinglabel.FloatingLabelView
+        android:id="@+id/ticketmodel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true" 
+        custom:textColorf="@color/theme_bar"
+        custom:textBackground="@drawable/edittext_rounded_corners"
+        custom:floatHintText="@string/ticket_model"
+        custom:floatHintTextColorFocused="@color/theme_bar"
+        custom:floatHintTextColorUnFocused="@color/red"
+        custom:floatHintTextGravity="left"
+        custom:floatHintTextSize="6"
+        custom:textSize="12"/>
+    
+    <com.hardik.floatinglabel.FloatingLabelView
+        android:id="@+id/ticketlicense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true" 
+        custom:textColorf="@color/theme_bar"
+        custom:textBackground="@drawable/edittext_rounded_corners"
+        custom:floatHintText="@string/ticket_license"
+        custom:floatHintTextColorFocused="@color/theme_bar"
+        custom:floatHintTextColorUnFocused="@color/red"
+        custom:floatHintTextGravity="left"
+        custom:floatHintTextSize="6"
+        custom:textSize="12"/>
         
-        <LinearLayout
+    <LinearLayout 
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:gravity="bottom">
         
-        <TextView
+        <ImageButton 
+            android:id="@+id/colorwheel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="4dp"
-            android:text="@string/ticket_model"
-            android:textSize="12dp" />
-            
-        <EditText
-            android:id="@+id/ticketmodel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="12dp"
-            android:textColor="@color/gray" 
-            android:singleLine="true">
-        </EditText>
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/ic_color"/>
         
-        </LinearLayout>
-        
-        <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-        
-        <TextView
+        <com.hardik.floatinglabel.FloatingLabelView
+            android:id="@+id/ticketcolor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="4dp"
-            android:text="@string/ticket_license"
+            android:editable="false"
+            android:focusable="false"
+            android:hint="@string/ticket_color"
+            android:singleLine="true"
+            android:textColor="@color/gray"
             android:textSize="12dp" />
-        
-        <EditText
-            android:id="@+id/ticketlicense"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="12dp"
-            android:textColor="@color/gray" 
-            android:singleLine="true">
-        </EditText>
-        
-        </LinearLayout>
-        
-        <LinearLayout 
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="bottom">
-            
-            <ImageButton 
-                android:id="@+id/colorwheel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:background="@drawable/ic_color"
-                android:layout_marginLeft="10dp"/>
-            
-            <EditText
-                android:id="@+id/ticketcolor"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:editable="false"
-                android:focusable="false"
-                android:hint="@string/ticket_color"
-                android:singleLine="true"
-                android:textColor="@color/gray"
-                android:textSize="12dp" />
-            
-        </LinearLayout>
         
     </LinearLayout>
 
@@ -284,7 +228,6 @@
         android:id="@+id/storageinfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:text="Storage Info"
         android:textColor="@color/color_pomegranate"
         android:textSize="14dp"
@@ -294,74 +237,54 @@
         android:layout_width="fill_parent"
         android:layout_height="0.5dp"
         android:background="@color/color_pomegranate" />
+        
+    <com.hardik.floatinglabel.FloatingLabelView
+        android:id="@+id/ticketparklocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:singleLine="true" 
+        custom:textColorf="@color/theme_bar"
+        custom:textBackground="@drawable/edittext_rounded_corners"
+        custom:floatHintText="@string/ticket_park"
+        custom:floatHintTextColorFocused="@color/theme_bar"
+        custom:floatHintTextColorUnFocused="@color/red"
+        custom:floatHintTextGravity="left"
+        custom:floatHintTextSize="6"
+        custom:textSize="12"/>
     
-    <LinearLayout
-        android:layout_width="fill_parent"
+    <com.hardik.floatinglabel.FloatingLabelView
+        android:id="@+id/ticketkeylocation"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
-
-        <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:singleLine="true" 
+        custom:textColorf="@color/theme_bar"
+        custom:textBackground="@drawable/edittext_rounded_corners"
+        custom:floatHintText="@string/ticket_key"
+        custom:floatHintTextColorFocused="@color/theme_bar"
+        custom:floatHintTextColorUnFocused="@color/red"
+        custom:floatHintTextGravity="left"
+        custom:floatHintTextSize="6"
+        custom:textSize="12" />
         
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="4dp"
-            android:text="@string/ticket_park"
-            android:textSize="12dp" />
-        
-        <EditText
-            android:id="@+id/ticketparklocation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:textSize="12dp"
-            android:textColor="@color/gray"
-            android:singleLine="true" >
-        </EditText>
-        
-		</LinearLayout>
-		
-        <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-        
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="4dp"
-            android:text="@string/ticket_key"
-            android:textSize="12dp" />
-        
-        <EditText
-            android:id="@+id/ticketkeylocation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:textSize="12dp"
-            android:textColor="@color/gray"
-            android:singleLine="true" />
-        </LinearLayout>
-        
-    </LinearLayout>
-    <Button 
+    <com.dd.processbutton.iml.ActionProcessButton 
 	    android:id="@+id/ticketsubmit"
-	    android:layout_width="wrap_content"
+	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
+	    android:layout_marginTop="10dp"
+	    android:layout_gravity="center"
 	    android:text="Add Ticket"
 	    android:textColor="@color/white"
 	    android:textStyle="bold"
-	    android:layout_gravity="center" 
-	    android:layout_margin="10dp"
-	    android:paddingLeft="25dp"
-	    android:paddingRight="25dp"/>
+	    custom:pb_colorComplete="@color/green_complete"
+	    custom:pb_colorNormal="@color/theme_bar"
+	    custom:pb_colorProgress="@color/purple_progress"
+	    custom:pb_textComplete="Success"
+	    custom:pb_textProgress="Creating..."
+	    custom:pb_textError="Error"
+	    custom:pb_colorError="@color/red_error"/>
     
-</LinearLayout>
-</ScrollView>
+	</LinearLayout>
+	</ScrollView>
 	
 </LinearLayout>
