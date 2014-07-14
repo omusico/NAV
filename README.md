@@ -4,11 +4,6 @@ This Android Application is a re-branded version of Vroom with a huge UI/UX desi
 ###Time Spent: 
 Not finished yet...
 
-###Images (Rough Draft UI/UX Designs):
-![alt text](https://raw.githubusercontent.com/chumlychum/NAV/master/demo/login.jpg "image")
-![alt text](https://raw.githubusercontent.com/chumlychum/NAV/master/demo/inventory.jpg "image")
-![alt text](https://raw.githubusercontent.com/chumlychum/NAV/master/demo/addticket.jpg "image")
-
 ###Current Features:
 ![alt text](http://forum.bodybuilding.com/attachment.php?attachmentid=4854623&d=1346914394 "check")User can login or signup for an account.
 
@@ -17,6 +12,13 @@ Not finished yet...
 ![alt text](http://forum.bodybuilding.com/attachment.php?attachmentid=4854623&d=1346914394 "check")Inventory page displays all tickets that were added (Adding a new ticket does not refresh the list automatically yet)
 		
 ![alt text](http://forum.bodybuilding.com/attachment.php?attachmentid=4854623&d=1346914394 "check")Staff page displays all online Users
+
+###Images (Rough Draft UI/UX Designs):
+![alt text](https://raw.githubusercontent.com/chumlychum/NAV/master/demo/login.jpg "image")
+
+![alt text](https://raw.githubusercontent.com/chumlychum/NAV/master/demo/inventory.jpg "image")
+
+![alt text](https://raw.githubusercontent.com/chumlychum/NAV/master/demo/addticket.jpg "image")
 
 ###Notes/Issues:
 For a more detailed project outlook, I have composed a google excel sheet of the project's progress here:
