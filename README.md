@@ -6,8 +6,8 @@ Not finished yet...
 
 ###Images (Rough Draft UI/UX Designs):
 ![alt text](https://raw.githubusercontent.com/chumlychum/NAV/master/demo/login.jpg "image")
-![alt text](https://raw.github.com/chumlychum/NAV/blob/master/demo/inventory.jpg "image")
-![alt text](https://raw.github.com/chumlychum/NAV/blob/master/demo/addticket.jpg "image")
+![alt text](https://raw.githubusercontent.com/chumlychum/NAV/blob/master/demo/inventory.jpg "image")
+![alt text](https://raw.githubusercontent.com/chumlychum/NAV/blob/master/demo/addticket.jpg "image")
 
 ###Current Features:
 ![alt text](http://forum.bodybuilding.com/attachment.php?attachmentid=4854623&d=1346914394 "check")User can login or signup for an account.
