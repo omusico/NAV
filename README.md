@@ -14,7 +14,7 @@ Not finished yet...
 ![alt text](http://forum.bodybuilding.com/attachment.php?attachmentid=4854623&d=1346914394 "check")Staff page displays all online Users
 
 ###Notes/Issues:
-Various third party libraries has been added, if you run into trouble installing it on your machine, please message me (Quan)!
+For a more detailed project outlook, I have composed a google excel sheet of the project's progress here:
+https://docs.google.com/spreadsheets/d/1ENGof3df7xY8a_OsnjETwD_qxIlGx4NbT9qjb3R-PQE/edit?usp=sharing
 
-###Sources:
-Many third party libraries has been used. An updated list of libraries will be composed at the completion of this project.
+Various third party libraries has been added, if you run into trouble getting the project loaded, please message me!
