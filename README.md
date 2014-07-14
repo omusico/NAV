@@ -11,6 +11,8 @@ Not finished yet...
 
 ![alt text](http://forum.bodybuilding.com/attachment.php?attachmentid=4854623&d=1346914394 "check")Inventory displays all tickets that were added (Adding a new ticket does not refresh the list automatically yet)
 		
+![alt text](http://forum.bodybuilding.com/attachment.php?attachmentid=4854623&d=1346914394 "check")Staff page displays all online Users
+
 ###Notes/Issues:
 Various third party libraries has been added, if you run into trouble installing it on your machine, please message me (Quan)!
 
