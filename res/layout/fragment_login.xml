@@ -5,19 +5,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/bridge">
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/edtUserName"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="30dp"
-        android:gravity="center"
-        android:text="@string/nav_title"
-        android:textColor="@color/white"
-        android:textSize="52sp"
-        android:textStyle="bold" />
-
     <com.cengalabs.flatui.views.FlatEditText
         android:id="@+id/edtUserName"
         android:layout_width="wrap_content"
@@ -102,5 +89,44 @@
     	flatui:cornerRadius="5dp" 
     	flatui:blockButtonEffectHeight="3dp"
         />
+
+	<TextView
+	    android:id="@+id/textView2"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBaseline="@+id/textView1"
+	    android:layout_alignBottom="@+id/textView1"
+	    android:layout_toRightOf="@+id/textView1"
+	    android:gravity="center"
+	    android:text="A"
+	    android:textColor="@color/white"
+	    android:textSize="52sp"
+	    android:textStyle="bold" />
+	
+	<TextView
+	    android:id="@+id/textView3"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBaseline="@+id/textView2"
+	    android:layout_alignBottom="@+id/textView2"
+	    android:layout_toRightOf="@+id/textView2"
+	    android:gravity="center"
+	    android:text="V"
+	    android:textColor="@color/color_pomegranate"
+	    android:textSize="52sp"
+	    android:textStyle="bold" />
+
+	<TextView
+	    android:id="@+id/textView1"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_above="@+id/edtUserName"
+	    android:layout_alignLeft="@+id/edtUserName"
+	    android:layout_marginBottom="31dp"
+	    android:layout_marginLeft="64dp"
+	    android:text="N"
+	    android:textColor="@color/color_pomegranate"
+	    android:textSize="52sp"
+	    android:textStyle="bold" />
 
 </RelativeLayout>

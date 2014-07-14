@@ -35,7 +35,8 @@
 		*Viewpager with Pagerstrip Icons!\n
 		*Actionbar has a "+" button to add new tickets!\n
 		*All form fields have a label floater for the edittext box\'s hint\n
-		*Inventory displays all Tickets that were added (Adding a new ticket does not refresh the list automatically yet)
+		*Inventory page displays all Tickets that were added (Adding a new ticket does not refresh the list automatically yet)\n
+		*Staff page displays all online Users\n
 		]]>
 	</string>
     <string name="about_creators">Developers: Quan + Perry</string>
