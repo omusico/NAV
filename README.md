@@ -4,7 +4,7 @@ This Android Application is a re-branded version of Vroom with a huge UI/UX desi
 ###Time Spent: 
 Not finished yet...
 
-###Images (Rough Draft UI/UX Designs)
+###Images (Rough Draft UI/UX Designs):
 ![alt text](https://github.com/chumlychum/NAV/blob/master/demo/login.jpg "image")
 ![alt text](https://github.com/chumlychum/NAV/blob/master/demo/inventory.jpg "image")
 ![alt text](https://github.com/chumlychum/NAV/blob/master/demo/addticket.jpg "image")
