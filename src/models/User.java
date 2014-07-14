@@ -8,7 +8,7 @@ public class User extends ParseUser {
 	
 	public User() {
 	}
-	
+
 	//Setters
 	public void setFirstName(String firstname){ put("firstname", firstname);}
 	public void setLastName(String lastname){ put("lastname", lastname);}
