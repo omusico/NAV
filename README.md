@@ -5,9 +5,9 @@ This Android Application is a re-branded version of Vroom with a huge UI/UX desi
 Not finished yet...
 
 ###Images (Rough Draft UI/UX Designs):
-!(https://github.com/chumlychum/NAV/blob/master/demo/login.jpg)
-!(https://github.com/chumlychum/NAV/blob/master/demo/inventory.jpg)
-!(https://github.com/chumlychum/NAV/blob/master/demo/addticket.jpg)
+![alt text](https://github.com/chumlychum/NAV/blob/master/demo/login.jpg "image")
+![alt text](https://github.com/chumlychum/NAV/blob/master/demo/inventory.jpg "image")
+![alt text](https://github.com/chumlychum/NAV/blob/master/demo/addticket.jpg "image")
 
 ###Current Features:
 ![alt text](http://forum.bodybuilding.com/attachment.php?attachmentid=4854623&d=1346914394 "check")User can login or signup for an account.
