@@ -13,6 +13,13 @@ Not finished yet...
 		
 ![alt text](http://forum.bodybuilding.com/attachment.php?attachmentid=4854623&d=1346914394 "check")Staff page displays all online Users
 
+###Images (Rough Draft UI/UX Designs):
+![alt text](https://raw.githubusercontent.com/chumlychum/NAV/master/demo/login.jpg "image")
+
+![alt text](https://raw.githubusercontent.com/chumlychum/NAV/master/demo/inventory.jpg "image")
+
+![alt text](https://raw.githubusercontent.com/chumlychum/NAV/master/demo/addticket.jpg "image")
+
 ###Notes/Issues:
 For a more detailed project outlook, I have composed a google excel sheet of the project's progress here:
 https://docs.google.com/spreadsheets/d/1ENGof3df7xY8a_OsnjETwD_qxIlGx4NbT9qjb3R-PQE/edit?usp=sharing
