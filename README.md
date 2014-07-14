@@ -9,7 +9,7 @@ Not finished yet...
 
 ![alt text](http://forum.bodybuilding.com/attachment.php?attachmentid=4854623&d=1346914394 "check")User can add new tickets with the actionbar menu "+" button
 
-![alt text](http://forum.bodybuilding.com/attachment.php?attachmentid=4854623&d=1346914394 "check")Inventory displays all tickets that were added (Adding a new ticket does not refresh the list automatically yet)
+![alt text](http://forum.bodybuilding.com/attachment.php?attachmentid=4854623&d=1346914394 "check")Inventory page displays all tickets that were added (Adding a new ticket does not refresh the list automatically yet)
 		
 ![alt text](http://forum.bodybuilding.com/attachment.php?attachmentid=4854623&d=1346914394 "check")Staff page displays all online Users
 
