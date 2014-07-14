@@ -1,5 +1,6 @@
 package fragments;
 
+import models.User;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -8,13 +9,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.dd.processbutton.iml.ActionProcessButton;
 import com.example.nav.R;
 import com.hardik.floatinglabel.FloatingLabelView;
-import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 
 public class RegisterInfo extends Fragment {
@@ -22,11 +21,11 @@ public class RegisterInfo extends Fragment {
 	private FloatingLabelView edtFirstName, edtEmail, edtUserName, edtLastName, edtPhone, edtPassword, edtPasswordAgain;
 	private ActionProcessButton btnCreateAccount;
 	private TextView tvValidation;
-	private ParseUser user;
+	private User user;
 	
 	@Override public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		user = new ParseUser();
+		user = new User();
 	}
 	
 	@Override public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -58,11 +57,10 @@ public class RegisterInfo extends Fragment {
 				user.setUsername(username);
 				user.setPassword(password);
 				user.setEmail(email);
-				user.put("phone", phone);
-				user.put("firstname", firstname);
-				user.put("lastname", lastname);
-				
-				
+				user.setPhone(phone);
+				user.setFirstName(firstname);
+				user.setLastName(lastname);
+				user.setOnline(true);
 		        
 				user.signUpInBackground(new SignUpCallback() { 
 					@Override public void done(com.parse.ParseException e) {
