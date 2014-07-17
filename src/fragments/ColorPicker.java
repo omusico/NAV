@@ -81,66 +81,47 @@ public class ColorPicker extends DialogFragment implements OnClickListener {
 		Intent i = new Intent();
 		Bundle extras = new Bundle();
 		
-		switch (v.getId()){
-			case R.id.black:
-				extras.putString("color", "Black");
-				break;
-			case R.id.silver:
-				extras.putString("color", "Silver");
-				break;
-			case R.id.white:
-				extras.putString("color", "White");
-				break;
-			case R.id.red:
-				extras.putString("color", "Red");
-				break;
-			case R.id.orange:
-				extras.putString("color", "Orange");
-				break;
-			case R.id.gold:
-				extras.putString("color", "Gold");
-				break;
-			case R.id.green:
-				extras.putString("color", "Green");
-				break;
-			case R.id.neon:
-				extras.putString("color", "Neon");
-				break;
-			case R.id.yellow:
-				extras.putString("color", "Yellow");
-				break;
-			case R.id.navy:
-				extras.putString("color", "Navy");
-				break;
-			case R.id.blue:
-				extras.putString("color", "Blue");
-				break;
-			case R.id.teal:
-				extras.putString("color", "Teal");
-				break;
-			case R.id.purple:
-				extras.putString("color", "Purple");
-				break;
-			case R.id.violet:
-				extras.putString("color", "Violet");
-				break;
-			case R.id.pink:
-				extras.putString("color", "Hot Pink");
-				break;
-			case R.id.brown:
-				extras.putString("color", "Brown");
-				break;
-			case R.id.rose:
-				extras.putString("color", "Rose");
-				break;
-			case R.id.lightpink:
-				extras.putString("color", "Pink");
-				break;
-			case R.id.gradient:
-				extras.putString("color", "Other");
-				break;	
-			default:
-				break;
+		int id = v.getId();
+		// Converted switch-case statements to if-else structure
+		if (id == R.id.black) {
+			extras.putString("color", "Black");
+		} else if (id == R.id.silver) {
+			extras.putString("color", "Silver");
+		} else if (id == R.id.white) {
+			extras.putString("color", "White");
+		} else if (id == R.id.red) {
+			extras.putString("color", "Red");
+		} else if (id == R.id.orange) {
+			extras.putString("color", "Orange");
+		} else if (id == R.id.gold) {
+			extras.putString("color", "Gold");
+		} else if (id == R.id.green) {
+			extras.putString("color", "Green");
+		} else if (id == R.id.neon) {
+			extras.putString("color", "Neon");
+		} else if (id == R.id.yellow) {
+			extras.putString("color", "Yellow");
+		} else if (id == R.id.navy) {
+			extras.putString("color", "Navy");
+		} else if (id == R.id.blue) {
+			extras.putString("color", "Blue");
+		} else if (id == R.id.teal) {
+			extras.putString("color", "Teal");
+		} else if (id == R.id.purple) {
+			extras.putString("color", "Purple");
+		} else if (id == R.id.violet) {
+			extras.putString("color", "Violet");
+		} else if (id == R.id.pink) {
+			extras.putString("color", "Hot Pink");
+		} else if (id == R.id.brown) {
+			extras.putString("color", "Brown");
+		} else if (id == R.id.rose) {
+			extras.putString("color", "Rose");
+		} else if (id == R.id.lightpink) {
+			extras.putString("color", "Pink");
+		} else if (id == R.id.gradient) {
+			extras.putString("color", "Other");
+		} else {
 		}
 		
 		i.putExtras(extras);
